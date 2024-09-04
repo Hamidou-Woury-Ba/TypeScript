@@ -28,3 +28,11 @@ const enum Size { Small = 1, Medium, Large } // Small = 1, Medium = 2, Large = 3
 let mySize : Size = Size.Medium // mySize = 2
 console.log(mySize) 
 
+// Functions
+function calculeTax(income : number, taxYear = 2022) : number{
+    if(taxYear < 2022)
+        return income * 0.1
+    return income * 0.2 
+}
+
+calculeTax(1000, 2023) //on ne peut passer à cette fonctions que le nombre d'arguments attendu
