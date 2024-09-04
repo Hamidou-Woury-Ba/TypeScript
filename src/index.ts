@@ -10,3 +10,7 @@ let course = "TypeScript" // sans l'annotation de type, TypeScript détecte auto
 let isPublished : boolean = true    
 
 let level // le type de level est any
+
+function render(document:string){ // sans annotation de type, nous avons une erreur
+    console.log(document)
+}
