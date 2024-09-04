@@ -20,3 +20,8 @@
     Par défaut lorsque nous compilons tu typescript meme s'il ya des erreurs le fichier javascript est créé donc pour pallier a cela il faut activer l'option noEmitOnError du fichier de configuration
     activer ce champ removeComments pour désactiver les commentaires lors de la compilation dans les fichiers js
 
+# Debugging
+## Option SourceMap
+    Fichier qui spécifie comment chaque ligne de notre code typescript correspond à notre code javascript
+
+
