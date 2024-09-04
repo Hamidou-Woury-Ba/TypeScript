@@ -24,4 +24,5 @@
 ## Option SourceMap
     Fichier qui spécifie comment chaque ligne de notre code typescript correspond à notre code javascript
 
-
+# Nouveaux Types Dans TypeScript
+    any - unknown - never - enum - tuple
