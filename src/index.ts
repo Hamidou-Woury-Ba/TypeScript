@@ -14,3 +14,5 @@ let level // le type de level est any
 function render(document:string){ // sans annotation de type, nous avons une erreur
     console.log(document)
 }
+
+let numbers : number[] = [1,2,3,4] // le type de numbers est number[]
