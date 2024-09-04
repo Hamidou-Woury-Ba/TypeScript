@@ -14,4 +14,6 @@ let user = [1, "Hamidou"];
 user.forEach((element) => {
     console.log(element);
 });
+let mySize = 2;
+console.log(mySize);
 //# sourceMappingURL=index.js.map

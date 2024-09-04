@@ -22,3 +22,9 @@ let user : [number, string] = [1, "Hamidou"]
 user.forEach((element) => {
     console.log(element)
 })
+
+// Enums : permet de définir un ensemble de constantes nommées qui peuvent être assignées à une variable 
+const enum Size { Small = 1, Medium, Large } // Small = 1, Medium = 2, Large = 3 par défaut
+let mySize : Size = Size.Medium // mySize = 2
+console.log(mySize) 
+
