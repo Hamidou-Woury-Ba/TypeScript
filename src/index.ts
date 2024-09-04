@@ -16,3 +16,9 @@ function render(document:string){ // sans annotation de type, nous avons une err
 }
 
 let numbers : number[] = [1,2,3,4] // le type de numbers est number[]
+
+// tuples : un tableau avec un nombre fixe d'éléments dont les types sont connus ou chaque élément a un type spécifique
+let user : [number, string] = [1, "Hamidou"]
+user.forEach((element) => {
+    console.log(element)
+})
