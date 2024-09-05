@@ -71,3 +71,72 @@ let employe : Employe = {
 }
 
 employe.retire(new Date())
+
+// Union Types : permet de définir un type qui peut être l'un des plusieurs types
+function kgToLbs(weight : number | string) : number {
+    if(typeof(weight) === 'number')
+        return weight * 2.20462
+    else
+        return parseInt(weight) * 2.20462
+}
+
+kgToLbs(50)
+kgToLbs("50")
+
+
+type Draggable = {
+    drag : () => void
+}
+
+type Resizable = {
+    resize : () => void
+}
+
+// Intersection Types : permet de combiner plusieurs types en un seul
+type UIWidget = Draggable & Resizable
+
+let texBox : UIWidget = {
+    drag : function(){
+        console.log("drag")
+    },
+    resize : function(){
+        console.log("resize")
+    }
+}
+
+// Literal Types : permet de définir un type qui peut être une valeur spécifique ou exacte
+type Quantity = 50 | 100 // Quantity peut être 50 ou 100
+let quantity : Quantity = 100 
+
+type Metric = "kg" | "lbs"
+let metric : Metric = "kg"
+
+// Non Literal Types : permet de définir un type qui peut prendre n'importe quelle valeur spécifié dans le type 
+function greet(name : string | null | undefined){
+    if(name)
+        console.log(name.toUpperCase())
+    else
+        console.log("Hola")
+}
+
+greet(undefined) // erreur car null n'est pas de type string
+
+type Customer = {
+    birthday? : Date
+}
+
+function getCustomer(id : number) : Customer | null | undefined {
+    return id === 0 ? null : { birthday : new Date() }
+}
+
+let customer = getCustomer(1)
+//if(customer != null && customer != undefined) //trop verbeux et redondant
+//Propriété optionnelle : permet de définir une propriété qui peut être null ou undefined
+console.log(customer?.birthday?.getFullYear()) // ?. permet de vérifier si customer est null ou undefined
+
+// Optional element access operator
+// customer?.[0] 
+
+// Optional call
+let log : any = null
+log?.('a') // si log est null, la fonction ne sera pas appelée
