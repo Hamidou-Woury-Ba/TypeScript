@@ -39,11 +39,30 @@ calculeTax(1000, 2023) //on ne peut passer à cette fonctions que le nombre d'ar
 
 // Objects : un objet est une collection de propriétés, et une propriété est une association entre un nom (ou une clé) et une valeur
 
-let employe : {
-    readonly id : number, // readonly : la propriété ne peut pas être modifiée après l'initialisation
+// let employe : {
+//     readonly id : number, // readonly : la propriété ne peut pas être modifiée après l'initialisation
+//     name : string,
+//     retire : (date : Date) => void // une fonction qui prend un argument de type Date et ne retourne rien
+// } = {
+//     id : 1,
+//     name : "Hamidou",
+//     retire : function(date : Date){
+//         console.log(date)
+//     }
+// }
+
+// console.log(employe.retire(new Date()))
+
+// employe.id = 2 // erreur car id est readonly
+
+// Type Aliases : permet de définir un alias pour un type existant 
+type Employe = {
+    readonly id : number,
     name : string,
-    retire : (date : Date) => void // une fonction qui prend un argument de type Date et ne retourne rien
-} = {
+    retire : (date : Date) => void
+}
+
+let employe : Employe = {
     id : 1,
     name : "Hamidou",
     retire : function(date : Date){
@@ -51,6 +70,4 @@ let employe : {
     }
 }
 
-console.log(employe.retire(new Date()))
-
-// employe.id = 2 // erreur car id est readonly
+employe.retire(new Date())

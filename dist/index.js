@@ -29,5 +29,5 @@ let employe = {
         console.log(date);
     }
 };
-console.log(employe.retire(new Date()));
+employe.retire(new Date());
 //# sourceMappingURL=index.js.map
