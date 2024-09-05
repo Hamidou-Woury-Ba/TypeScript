@@ -16,4 +16,18 @@ user.forEach((element) => {
 });
 let mySize = 2;
 console.log(mySize);
+function calculeTax(income, taxYear = 2022) {
+    if (taxYear < 2022)
+        return income * 0.1;
+    return income * 0.2;
+}
+calculeTax(1000, 2023);
+let employe = {
+    id: 1,
+    name: "Hamidou",
+    retire: function (date) {
+        console.log(date);
+    }
+};
+console.log(employe.retire(new Date()));
 //# sourceMappingURL=index.js.map

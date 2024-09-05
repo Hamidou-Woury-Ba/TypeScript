@@ -36,3 +36,21 @@ function calculeTax(income : number, taxYear = 2022) : number{
 }
 
 calculeTax(1000, 2023) //on ne peut passer à cette fonctions que le nombre d'arguments attendu
+
+// Objects : un objet est une collection de propriétés, et une propriété est une association entre un nom (ou une clé) et une valeur
+
+let employe : {
+    readonly id : number, // readonly : la propriété ne peut pas être modifiée après l'initialisation
+    name : string,
+    retire : (date : Date) => void // une fonction qui prend un argument de type Date et ne retourne rien
+} = {
+    id : 1,
+    name : "Hamidou",
+    retire : function(date : Date){
+        console.log(date)
+    }
+}
+
+console.log(employe.retire(new Date()))
+
+// employe.id = 2 // erreur car id est readonly
